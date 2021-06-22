@@ -3,6 +3,8 @@ import './PropertyDetail.scss'
 import {Button, Grid} from "@material-ui/core";
 import contact from '../../image/contact.png';
 import mail from '../../image/mail.png'
+import house01 from '../../image/house01.png'
+import { Carousel } from "react-responsive-carousel";
 
 const PropertyDetail = () => {
     return (
@@ -67,7 +69,20 @@ const PropertyDetail = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <h1 className="title">
-                        carousal Comming Soon
+                        <Carousel showThumbs={false}>
+                            <div>
+                                <img alt="" src={house01} />
+                            </div>
+                            <div>
+                                <img alt="" src={house01} />
+                            </div>
+                            <div>
+                                <img alt="" src={house01} />
+                            </div>
+                            <div>
+                                <img alt="" src={house01} />
+                            </div>
+                        </Carousel>
                     </h1>
                 </Grid>
             </Grid>
