@@ -6,7 +6,6 @@ import TextField from '@material-ui/core/TextField';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Controls from "../controls/Controls";
 import {Grid, Button} from "@material-ui/core";
 import logo from '../../image/logo.png';
 import back from '../../image/back.png'
@@ -17,7 +16,6 @@ function TabPanel(props) {
 
     return (
         <div className="form_container">
-            {/*<div className="form_content">*/}
             <div
                 role="tabpanel"
                 hidden={value !== index}
@@ -124,9 +122,7 @@ export default function NavTabs() {
             <div className="form_container">
                 <img src={logo} alt="logo" width='250' style={{padding: '18px'}}/>
             </div>
-            {/*<div className="container_cover"></div>*/}
             <div className="form_container">
-                {/*<AppBar position="static">*/}
                 <Tabs
                     // variant="fullWidth"
                     value={value}
@@ -136,7 +132,6 @@ export default function NavTabs() {
                     <LinkTab label="login" href="/drafts" {...a11yProps(0)} />
                     <LinkTab label="Sign up" href="/trash" {...a11yProps(1)} />
                 </Tabs>
-                {/*</AppBar>*/}
             </div>
             <TabPanel value={value} index={0}>
                 <div>

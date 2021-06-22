@@ -1,55 +1,5 @@
-@import "variable.scss";
-
-.container_cover{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 999;
-}
-
-.container_cover::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.349);;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: -999;
-}
-
 .form_container{
     display: flex;
     justify-content: center;
     z-index: 999;
 }
-
-.form_content{
-    background-color: rgb(255, 255, 255);
-    width: 450px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 2rem;
-     z-index: 999;
-     border-radius: 0.3rem;
-}
-
-.form_close_btn{
-    align-self: flex-end;
-}
- 
-.btn-center{
-     display: flex;
-     justify-content: center;
-     padding: 1rem; 
- }
-
- .form-title-content{
-    color: $primary-color;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
- }
