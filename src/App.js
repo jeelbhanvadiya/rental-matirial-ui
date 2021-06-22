@@ -6,6 +6,8 @@ import {
 import Login from "./components/Login/Login";
 import ThemePalette from "./components/theme";
 import ProfilePage from "./components/ProfilePage/profile";
+import PropertyDetail from "./components/PropertyDetail/PropertyDetail";
+import CreateForm from "./components/CreateForm/create";
 
 function App() {
   return (
@@ -27,6 +29,12 @@ function App() {
                       <Route path='/profile'>
                         <ProfilePage/>
                       </Route>
+                        <Route path='/PropertyDetail'>
+                            <PropertyDetail/>
+                        </Route>
+                        <Route path='/create_form'>
+                            <CreateForm/>
+                        </Route>
                     </Switch>
                   </Grid>
                 </Grid>
