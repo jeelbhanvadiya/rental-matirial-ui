@@ -1,0 +1,35 @@
+@import "variable.scss";
+
+.footer-container{
+    width: 100%;
+    // background-image: linear-gradient ($primary-color,$dark-blue-color);
+    // background-image: linear-gradient($medium-dark-blue-color, $primary-color);
+    background-color: $primary-color;
+    color: $secondary-color;
+    text-align: center;
+    padding-top: 1rem;
+    a{
+        color: white;
+    }
+}
+.footer-content{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-middle-content{
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons{
+    display: flex;
+}
+
+
+

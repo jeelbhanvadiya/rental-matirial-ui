@@ -1,0 +1,60 @@
+@import "normalize.scss";
+@import "variable.scss";
+@import "app.scss";
+@import "publish.scss";
+@import "footer.scss";
+@import "listing_card";
+@import "profile.scss";
+@import "home.scss";
+@import "login.scss";
+@import "dropzone.scss";
+@import "header.scss";
+@import "greeting.scss";
+
+
+.aboutus-title{
+    background-color: rgba(255, 255, 255, 0.835);
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.paper3-container{
+    border: 1px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px -2px $medium-dark-blue-color, 0px 3px 4px 0px $dark-blue-color, 0px 1px 8px 0px $medium-dark-blue-color;
+    background-color: #fff;
+}
+
+.paper5-container{
+    border: 1px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 3px -2px #3f72af80, 0px 3px 4px 0px #112d4e70, 0px 1px 8px 0px #3f72af99;
+    background-color: #fff;
+}
+
+.listdetail-icon{
+    font-size: 1.2rem;
+    color: $primary-color;
+}
+
+.font-color{
+    color: $text-primary-color;
+    text-transform: none;
+}
+
+.ck-editor__editable {
+    min-height: 150px;
+}
+
+
+.MuiDialog-scrollPaper{
+    align-items: flex-end !important;
+}
+

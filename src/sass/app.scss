@@ -1,0 +1,14 @@
+@import "variable.scss";
+.app-container{
+    background-color: $background-color;
+}
+
+.pagination-container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.snackbar-container{
+    background-color: $dark-blue-color;
+}

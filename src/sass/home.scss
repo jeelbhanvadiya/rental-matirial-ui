@@ -1,0 +1,46 @@
+@import "variable.scss";
+
+.favoriteContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.favorite-bg-color {
+  background-color: $favorite-bg-color;
+}
+
+.active-favorite-btn {
+  color: $favorite-active-color;
+}
+
+.inactive-favorite-btn {
+  color: $favorite-inactive-color;
+}
+
+.point-container {
+  color: #000000;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.card-detail-container {
+  display: flex;
+  border: 1px solid black;
+  margin-left: 2rem;
+  flex-direction: column;
+}
+
+.text-warp-container {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  overflow: hidden;
+}

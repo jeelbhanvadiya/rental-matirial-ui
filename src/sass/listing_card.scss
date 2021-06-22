@@ -1,0 +1,85 @@
+@import "variable.scss";
+.listing-card-container {
+  margin: auto;
+  max-width: 700px;
+  .card_item{
+    margin: 0.5rem;
+  }
+  .card-content {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    
+  }
+  .chip-style{
+    font-size: 1.3rem;
+    padding: 0.3rem;
+  }
+  .card-message-container{
+    margin: 2rem;
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+  }
+}
+
+.publishNavContain{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    .navBtn{
+      padding: 0.5rem 2.5rem;
+      border: 1px;
+      border-radius: 4px;
+      box-shadow: 0px 3px 3px -2px #3f72af80, 0px 3px 4px 0px #112d4e70, 0px 1px 8px 0px #3f72af99;
+      background-color: #fff;
+      
+    }
+    :first-child{
+      margin-right: 1rem;
+    }
+    .active{
+      font-weight: bold;
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+}
+
+
+
+.image-container{
+  margin: 8px -4px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: contain;
+}
+
+.image-text{
+  color: #fff;
+    bottom: 8px;
+    padding: 4px;
+    position: absolute;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.54);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+// @media all and (max-width: 992px) {
+//   body {
+//     font-size: 14px !important;
+//   }
+// }
+
+// @media all and (max-width: 688px) {
+//   body{
+//     font-size: 12px !important;
+//   }
+// }

@@ -1,0 +1,40 @@
+.profile {
+  padding: 100px;
+  .button-big {
+    font-size: 18px;
+    height: 50px;
+    margin-top: 10px;
+    text-transform: unset;
+    color: #072C50;
+    background-color: #FFFFFF;
+    border: 1px solid #757575;
+    border-radius: 30px;
+    box-shadow: unset;
+    &:hover {
+      background-color: #072C50;
+      color: #FFFFFF;
+    }
+  }
+  .button-small {
+    font-size: 15px;
+    height: 30px;
+    margin-top: 10px;
+    text-transform: unset;
+    background-color: #072C50;
+    color: #FFFFFF;
+    border: 1px solid #757575;
+    border-radius: 30px;
+    box-shadow: unset;
+  }
+  .personalInfo{
+    padding: 15px 30px;
+    border-radius: 15px;
+    border: 2px solid #B7B7B7;
+    .heading{
+      color:  #072C50 ;
+    }
+    .inputFields {
+      padding: 20px 10px
+    }
+  }
+}
