@@ -49,7 +49,6 @@
         .custom-small-button {
           color: #072C50;
           background: #FFFFFF;
-          width: fit-content;
           padding: 10px 40px;
           font-size: 18px;
           margin-top: 10px;
@@ -97,6 +96,9 @@
     text-align: center;
     color: #072C50;
     font-size: 20px;
+  }
+  .inquery-list {
+    padding: 0px 10px;
   }
   .inquiry-list {
     .display {

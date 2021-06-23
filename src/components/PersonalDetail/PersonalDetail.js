@@ -36,7 +36,7 @@ const PersonalDetail = () => {
                              !(selectedList === "My inquiry list")  &&  houseList.map((item, index) => {
                                  return(
                                      <Grid container>
-                                         <Grid item xs={4} md={4} className="padding10">
+                                         <Grid item xs={12} md={12} className="padding10 inquery-list">
                                                  <Button variant="contained" className="custom-small-button" fullWidth>{item.name}{`(${item.value.length})`}</Button>
                                          </Grid>
                                      </Grid>
