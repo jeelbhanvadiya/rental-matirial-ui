@@ -80,3 +80,9 @@
 .MuiDropzoneArea-text {
   margin-top: 10px !important;
 }
+
+@media screen and (max-width: 720px) {
+  .create {
+    padding: 10px !important;
+  }
+}
