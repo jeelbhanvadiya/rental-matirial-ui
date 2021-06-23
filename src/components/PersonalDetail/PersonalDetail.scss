@@ -48,6 +48,7 @@
         .custom-button {
           font-size: 16px;
           background: #072C50;
+          color: white;
           width: fit-content;
           border-radius: 100px;
           padding: 10px 40px
@@ -145,4 +146,8 @@
       color: #707070;
     }
   }
+}
+
+.MuiButton-root {
+  text-transform: unset !important;
 }

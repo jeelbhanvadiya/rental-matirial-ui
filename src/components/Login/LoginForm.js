@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  colorRed: {
+    color: 'red',
+  }
 }));
 
 const LoginForm = ({ onAuth, onSetCredentials, error }) => {
@@ -36,7 +39,7 @@ const LoginForm = ({ onAuth, onSetCredentials, error }) => {
             inputProps={{ maxLength: 15 }}
           />
         </Grid>
-        {error && <span style={{ color: "red" }}>{error.network}</span>}
+        {error && <span className={classes.colorRed}>{error.network}</span>}
         <Grid item xs={12} className="btn-center">
           <MuiButton
                      size={'small'}
@@ -46,7 +49,6 @@ const LoginForm = ({ onAuth, onSetCredentials, error }) => {
             login
           </MuiButton>
         </Grid>
-        
       </Grid>
     </form>
   );

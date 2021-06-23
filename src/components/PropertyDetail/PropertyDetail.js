@@ -60,8 +60,8 @@ const PropertyDetail = () => {
                             </Grid>
                             <Grid item xs={12} md={9} className="pd-5">
                                 <div className="small-box-decription">
-                                    <img src={contact}/>xyz abc<br/>
-                                    <img src={mail}/>xyz@gmail.com
+                                    <img src={contact} alt="contact"/>&nbsp;&nbsp;xyz abc<br/>
+                                    <img src={mail} alt="mail"/>&nbsp;&nbsp;xyz@gmail.com
                                 </div>
                             </Grid>
                         </Grid>

@@ -24,7 +24,7 @@ const inquiryDetails = [
 ]
 
 const InquiryList = () => {
-    const[isShowLess, setShowLoss] = useState(true)
+    const[isShowLess, setShowLoss] = useState(false)
     const[specificCardDetail, setSpecificCardDetail] = useState({
         name: "LOVELY DAVY",
         shortName: "LD",

@@ -39,8 +39,9 @@ a {
 .font-color {
   color: #1E3859;
   text-transform: none; }
+
 .carousel.carousel-slider {
-  width: auto !important;
-  height: 303px;
+  width: auto!important;
+  height: 457px;
   margin-left: 56px !important;
 }

@@ -6,9 +6,10 @@ const ProfilePage = () => {
     return (
         <div className='profile'>
             <Grid container>
-                <Grid item xs={12} md={6}  style={{padding: '10px'}}>
+                <Grid item xs={12} md={5} className="padding10">
                     <div>
-                        <Button variant="contained" className="button-big" style={{paddingTop: 'unset'}} fullWidth>Personal information </Button>
+                        <Button variant="contained" className="button-big padding-unset" fullWidth>Personal
+                            information </Button>
                     </div>
                     <div>
                         <Button variant="contained" className="button-big" fullWidth>Contact details</Button>
@@ -20,27 +21,37 @@ const ProfilePage = () => {
                         <Button variant="contained" className="button-big" fullWidth>Account removal </Button>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={6} style={{padding: '10px'}}>
+                <Grid item xs={12} md={1}/>
+                <Grid item xs={12} md={6} className="padding10">
                     <div className="personalInfo">
                         <h1 className="heading">Personal information</h1>
                         <Grid container>
                             <Grid item xs={12} md={6}>
                                 <div className="inputFields">
-                                    <TextField id="standard-basic"  fullWidth label="First name"/>
-                                </div>
-                                <div className="inputFields">
-                                    <TextField id="standard-basic"  fullWidth label="Date of birth"/>
-                                </div>
-                                <div className="inputFields">
-                                    <TextField id="standard-basic"  fullWidth label="Nationality "/>
-                                </div >
-                                <div className="inputFields">
-                                    <Button className='button-small' variant="contained"  fullWidth >Save changes </Button>
+                                    <TextField id="standard-basic" fullWidth label="First name"/>
                                 </div>
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <div className="inputFields">
-                                <TextField id="standard-basic" label="Last name" fullWidth/>
+                                    <TextField id="standard-basic" label="Last name" fullWidth/>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <div className="inputFields">
+                                    <TextField id="standard-basic" fullWidth label="Date of birth"/>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={6} />
+                            <Grid item xs={12} md={6}>
+                                <div className="inputFields">
+                                    <TextField id="standard-basic" fullWidth label="Nationality "/>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={6} />
+                            <Grid item xs={12} md={6}>
+                                <div className="inputFields">
+                                    <Button className='button-small' variant="contained" fullWidth>Save
+                                        changes </Button>
                                 </div>
                             </Grid>
                         </Grid>
