@@ -50,7 +50,7 @@ const InquiryList = () => {
                         <div/>
                         <div className="all-button">
                             <div>
-                                <div className="mt-20 display">
+                                <div className="display">
                                     <div className="short-name">
                                         <span>  {specificCardDetail.shortName || ""}</span>
                                     </div>
@@ -63,7 +63,7 @@ const InquiryList = () => {
                                     <div className="mt-20 looking-for">
                                         {specificCardDetail.lookingFor || ""}
                                     </div>
-                                    <div className="mt-30 mb-20">
+                                    <div className="mt-30">
                                         <Button variant="contained" className="read-button" onClick ={showLessAndMore} fullWidth>Read less</Button>
                                     </div>
                                     <div className="card">

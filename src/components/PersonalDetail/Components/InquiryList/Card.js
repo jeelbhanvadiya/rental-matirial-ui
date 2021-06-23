@@ -13,7 +13,7 @@ const Card = (props) => {
                             inquiryDetails.map((item, index) => {
                                 return(
                                     <div className="card mb-20" key={index}>
-                                        <div className="mt-20 display">
+                                        <div className="display">
                                             <div className="short-name">
                                                 <span>  {item.shortName || ""}</span>
                                             </div>
@@ -26,7 +26,7 @@ const Card = (props) => {
                                             <div className="mt-20 looking-for">
                                                 {item.lookingFor || ""}
                                             </div>
-                                            <div className="mt-30 mb-20">
+                                            <div className="mt-30">
                                                 <Button variant="contained" className="read-button" onClick={() => showLessAndMore(item)} fullWidth>Read more</Button>
                                             </div>
                                         </div>

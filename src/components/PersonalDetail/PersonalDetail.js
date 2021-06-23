@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import InquiryList from "./Components/InquiryList/InquiryList.js"
 import "./PersonalDetail.scss"
-import {Button} from "@material-ui/core";
+import {Button, Grid} from "@material-ui/core";
 
 const inquiryListDetail = ["My house list", "My inquiry list"]
 const houseList = [{name: "All", value: []} , {name: "Publish", value: ""}, {name: "unPublished", value: []}]
@@ -31,13 +31,15 @@ const PersonalDetail = () => {
                       }
                   </div>
                   <div className="mt-20">
-                     <div className="d-inherit">
+                     <div className="d-inherit w-100">
                          {
                              !(selectedList === "My inquiry list")  &&  houseList.map((item, index) => {
                                  return(
-                                     <div className={`${index > 0 && "ml-7"}`}>
-                                         <Button variant="contained" className="custom-small-button" fullWidth>{item.name}{`(${item.value.length})`}</Button>
-                                     </div>
+                                     <Grid container>
+                                         <Grid item xs={4} md={4} className="padding10">
+                                                 <Button variant="contained" className="custom-small-button" fullWidth>{item.name}{`(${item.value.length})`}</Button>
+                                         </Grid>
+                                     </Grid>
                                  )
                              })
                          }

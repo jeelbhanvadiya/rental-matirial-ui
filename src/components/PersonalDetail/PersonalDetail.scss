@@ -5,14 +5,15 @@
     display: flex;
     justify-content: space-between;
     .all-button {
+      .w-100{
+        width: 100%;
+      }
+
       .d-inherit {
         display: inline-flex;
         @media screen and (min-width: 1024px) {
           .default {
-            width: 500px !important;
-          }
-          .custom-small-button {
-            width: 344px !important;
+            width: 400px !important;
           }
         }
         @media screen and (max-width: 1024px) {
@@ -34,24 +35,48 @@
             color: #072C50;
             font-size: 16px;
             background: #FFFFFF;
-            border-radius: 100px;
             padding: 10px 40px;
+            text-transform: unset;
+            border: 1px solid #757575;
+            border-radius: 30px;
+            box-shadow: unset;
+            &:hover {
+              background-color: #072C50;
+              color: #FFFFFF;
+            }
           }
         }
         .custom-small-button {
           color: #072C50;
           background: #FFFFFF;
           width: fit-content;
-          border-radius: 100px;
-          padding: 10px 40px
+          padding: 10px 40px;
+          font-size: 18px;
+          margin-top: 10px;
+          text-transform: unset;
+          border: 1px solid #757575;
+          border-radius: 30px;
+          box-shadow: unset;
+          &:hover {
+            background-color: #072C50;
+            color: #FFFFFF;
+          }
         }
         .custom-button {
+          font-weight: bold;
           font-size: 16px;
           background: #072C50;
           color: white;
           width: fit-content;
-          border-radius: 100px;
-          padding: 10px 40px
+          padding: 10px 40px;
+          text-transform: unset;
+          border: 1px solid #757575;
+          border-radius: 30px;
+          box-shadow: unset;
+          &:hover {
+            background-color: #072C50;
+            color: #FFFFFF;
+          }
         }
         .ml-40{
           margin-left: 40px;
@@ -106,12 +131,12 @@
 
     .room {
       color: #072C50;
-      font-size: 43px;
+      font-size: 25px;
     }
 
     .looking-for {
       color: #072C50;
-      font-size: 32px;
+      font-size: 20px;
     }
 
     .mb-20 {
@@ -128,11 +153,12 @@
     }
     @media screen and (min-width: 1024px) {
       .card {
-        width: 1040px;
+        width: 840px;
       }
     }
 
     .card {
+      margin-top: 20px;
       padding: 35px;
       color: #707070;
       font-size: 20px;
