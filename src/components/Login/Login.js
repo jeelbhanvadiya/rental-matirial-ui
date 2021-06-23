@@ -154,17 +154,43 @@ export default function NavTabs() {
         const emailRegx = /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/ig;
         switch (name) {
             case 'firstName':
-                return "Please Enter First Name!!";
+                if (!value) {
+                    return "Please Enter First Name!!";
+                } else {
+                    return null
+                }
             case 'password':
-                return "Please Enter Password!!";
+                if (!value) {
+                    return "Please Enter Password!!";
+                } else {
+                    return null
+                }
             case 'firstNameRegister':
-                return "Please Enter First Name!!";
+                if (!value) {
+                    return "Please Enter First Name!!";
+                } else {
+                    return null
+                }
             case 'lastName':
-                return "Please Enter lastName!!";
+                if (!value) {
+                    return "Please Enter lastName!!";
+                } else {
+                    return null
+                }
             case 'email':
-                return "Please Enter email!!";
+                if (!value) {
+                    return "Please Enter email!!";
+                } else {
+                    return null
+                }
             case 'emailConfirm':
-                return "Please Enter emailConfirm!!";
+                if (!value) {
+                    return "Please Enter emailConfirm!!";
+                } else {
+                    return null
+                }
+            default:
+                return  null
         }
     };
 
