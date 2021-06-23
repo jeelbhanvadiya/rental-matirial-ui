@@ -16,6 +16,7 @@
     margin-top: 25px;
     height: 20px;
     opacity: 1;
+    font-weight: 600;
     fill: #072C50;
     font-size: 20px;
     text-align: left;
@@ -57,7 +58,7 @@
     color: #072C50;
     background-color: #FFFFFF;
     border: 1px solid #757575;
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: unset;
   }
 }
@@ -79,6 +80,11 @@
 
 .MuiDropzoneArea-text {
   margin-top: 10px !important;
+}
+
+textarea {
+  resize: none;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 720px) {
