@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 .personal-detail {
   padding: 10px;
   margin-top: 25px;
@@ -40,6 +41,8 @@
             border: 1px solid #757575;
             border-radius: 30px;
             box-shadow: unset;
+            font-family: Montserrat-Medium, sans-serif;
+            font-weight: bold;
             &:hover {
               background-color: #072C50;
               color: #FFFFFF;
@@ -47,6 +50,7 @@
           }
         }
         .custom-small-button {
+          font-family: Montserrat-Medium, sans-serif;
           color: #072C50;
           background: #FFFFFF;
           padding: 10px 40px;
@@ -62,6 +66,7 @@
           }
         }
         .custom-button {
+          font-family: Montserrat-Medium, sans-serif;
           font-weight: bold;
           font-size: 16px;
           background: #072C50;
@@ -93,6 +98,7 @@
     margin-top: 70px;
   }
   .empty-list{
+    font-family: Montserrat-Medium, sans-serif;
     text-align: center;
     color: #072C50;
     font-size: 20px;
@@ -107,6 +113,7 @@
       position: relative;
 
       .short-name {
+        font-family: Montserrat-Regular, sans-serif;
         height: 70px;
         width: 70px;
         color: #FFFFFF;
@@ -123,6 +130,7 @@
     }
 
     .name {
+      font-family: Montserrat-Regular, sans-serif;
       color: #072C50;
       margin-left: 5px;
     }
@@ -132,11 +140,13 @@
     }
 
     .room {
+      font-family: Montserrat-SemiBold, sans-serif;
       color: #072C50;
       font-size: 25px;
     }
 
     .looking-for {
+      font-family: Montserrat-Regular, sans-serif;
       color: #072C50;
       font-size: 20px;
     }
@@ -146,6 +156,7 @@
     }
 
     .read-button {
+      font-family: Montserrat-Regular, sans-serif;
       padding: 10px 50px;
       background: #072C50;
       color: #FFFFFF;
@@ -167,9 +178,11 @@
       border-radius: 20px;
       border: 1px solid #707070;
       word-break: break-all;
+      font-family: Montserrat-Regular, sans-serif;
     }
 
     .mail-text {
+      font-family: Montserrat-Regular, sans-serif;
       font-size: 22px;
       color: #707070;
     }
