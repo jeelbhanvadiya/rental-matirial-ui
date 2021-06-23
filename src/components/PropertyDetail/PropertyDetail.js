@@ -67,23 +67,25 @@ const PropertyDetail = () => {
                         </Grid>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <h1 className="title">
-                        <Carousel showThumbs={false}>
-                            <div>
-                                <img alt="" src={house01} />
-                            </div>
-                            <div>
-                                <img alt="" src={house01} />
-                            </div>
-                            <div>
-                                <img alt="" src={house01} />
-                            </div>
-                            <div>
-                                <img alt="" src={house01} />
-                            </div>
-                        </Carousel>
-                    </h1>
+                <Grid item xs={12} md={1} style={{marginBottom: 26}}/>
+                <Grid item xs={12} md={3}>
+                    <Carousel showThumbs={false} dynamicHeight={true} useKeyboardArrows={true} >
+                        <div>
+                            <img alt="" src={house01} />
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+                            </p>
+                        </div>
+                        <div>
+                            <img alt="" src={house01} />
+                        </div>
+                        <div>
+                            <img alt="" src={house01} />
+                        </div>
+                    </Carousel>
                 </Grid>
             </Grid>
         </div>
