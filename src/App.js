@@ -2,6 +2,7 @@ import {Switch, Route,} from "react-router-dom";
 import Login from "./components/Login/Login";
 import ThemePalette from "./components/theme";
 import ProfilePage from "./components/ProfilePage/profile";
+import PersonalDetail from "./components/PersonalDetail/PersonalDetail"
 import PropertyDetail from "./components/PropertyDetail/PropertyDetail";
 import CreateForm from "./components/CreateForm/create";
 import  Header  from "./components/Header";
@@ -28,6 +29,11 @@ function App() {
                 <Route path='/create_form'>
                     <Header/>
                     <CreateForm/>
+                    <Footer/>
+                </Route>
+                <Route path='/personaldetail'>
+                    <Header/>
+                    <PersonalDetail/>
                     <Footer/>
                 </Route>
             </Switch>

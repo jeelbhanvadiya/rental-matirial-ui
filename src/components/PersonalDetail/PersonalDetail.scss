@@ -1,0 +1,148 @@
+.personal-detail {
+  padding: 10px;
+  margin-top: 25px;
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    .all-button {
+      .d-inherit {
+        display: inline-flex;
+        @media screen and (min-width: 1024px) {
+          .default {
+            width: 500px !important;
+          }
+          .custom-small-button {
+            width: 344px !important;
+          }
+        }
+        @media screen and (max-width: 1024px) {
+          .custom-small-button {
+            padding: 10px 27px !important;
+          }
+          .custom-color {
+            .MuiButton-root{
+              padding: 10px 20px !important;
+            }
+          }
+          .custom-button {
+            padding: 10px 20px !important;
+          }
+        }
+
+        .custom-color {
+          .MuiButton-root{
+            color: #072C50;
+            font-size: 16px;
+            background: #FFFFFF;
+            border-radius: 100px;
+            padding: 10px 40px;
+          }
+        }
+        .custom-small-button {
+          color: #072C50;
+          background: #FFFFFF;
+          width: fit-content;
+          border-radius: 100px;
+          padding: 10px 40px
+        }
+        .custom-button {
+          font-size: 16px;
+          background: #072C50;
+          width: fit-content;
+          border-radius: 100px;
+          padding: 10px 40px
+        }
+        .ml-40{
+          margin-left: 40px;
+        }
+      }
+      .mt-20 {
+        margin-top: 20px;
+      }
+      .ml-7 {
+        margin-left: 7px;
+      }
+    }
+  }
+  .mt-70 {
+    margin-top: 70px;
+  }
+  .empty-list{
+    text-align: center;
+    color: #072C50;
+    font-size: 20px;
+  }
+  .inquiry-list {
+    .display {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .short-name {
+        height: 70px;
+        width: 70px;
+        color: #FFFFFF;
+        border-radius: 100px;
+        background: #072C50;
+        font-size: 30px;
+
+        span {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+        }
+      }
+    }
+
+    .name {
+      color: #072C50;
+      margin-left: 5px;
+    }
+
+    .mt-30 {
+      margin-top: 30px;
+    }
+
+    .room {
+      color: #072C50;
+      font-size: 43px;
+    }
+
+    .looking-for {
+      color: #072C50;
+      font-size: 32px;
+    }
+
+    .mb-20 {
+      margin-bottom: 20px;
+    }
+
+    .read-button {
+      padding: 10px 50px;
+      background: #072C50;
+      color: #FFFFFF;
+      font-size: 20px;
+      width: fit-content;
+      border-radius: 100px;
+    }
+    @media screen and (min-width: 1024px) {
+      .card {
+        width: 1040px;
+      }
+    }
+
+    .card {
+      padding: 35px;
+      color: #707070;
+      font-size: 20px;
+      border-radius: 20px;
+      border: 1px solid #707070;
+      word-break: break-all;
+    }
+
+    .mail-text {
+      font-size: 22px;
+      color: #707070;
+    }
+  }
+}
