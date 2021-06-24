@@ -194,12 +194,29 @@ export default function NavTabs() {
         }
     };
 
-    const handleSubmit = () => {
+    const handleLoginSubmit = () => {
         let allErrors = {};
         const userData = {
             firstName: loginDetails.firstName,
-            firstNameRegister: loginDetails.firstNameRegister,
             password: loginDetails.password,
+        }
+        Object.keys(userData).forEach(key => {
+            const error = validation(key, userData[key])
+            if (error && error.length) {
+                allErrors[key] = error;
+            }
+        })
+        if (Object.keys(allErrors).length) {
+            setError(allErrors)
+        } else {
+            setError({})
+        }
+    };
+
+    const handleRegisterSubmit = () => {
+        let allErrors = {};
+        const userData = {
+            firstNameRegister: loginDetails.firstNameRegister,
             lastName: loginDetails.lastName,
             email: loginDetails.email,
             emailConfirm: loginDetails.emailConfirm
@@ -213,10 +230,9 @@ export default function NavTabs() {
         if (Object.keys(allErrors).length) {
             setError(allErrors)
         } else {
-            console.log("register")
             setError({})
         }
-    }
+    };
 
     return (
         <div className={classes.root}>
@@ -269,7 +285,7 @@ export default function NavTabs() {
                     <span className={classes.validation}>{errors.password}</span>
                 </div>
                 <div>
-                    <Button variant="contained" fullWidth onClick={handleSubmit}>login</Button>
+                    <Button variant="contained" fullWidth onClick={handleLoginSubmit}>login</Button>
                 </div>
                 <Grid item xs={12} className={classes.linkMargin}>
                     <Link to="/login" className="font-color">forgot password?</Link>
@@ -340,7 +356,7 @@ export default function NavTabs() {
                     <span className={classes.validation}>{errors.emailConfirm}</span>
                 </div>
                 <div>
-                    <Button variant="contained" onClick={handleSubmit} fullWidth>Register</Button>
+                    <Button variant="contained" onClick={handleRegisterSubmit} fullWidth>Register</Button>
                 </div>
                 <Grid item xs={12} className={classes.linkMargin}>
                     <Link to="/login" className="font-color">Already have an account?&nbsp;<b>Login</b></Link>
