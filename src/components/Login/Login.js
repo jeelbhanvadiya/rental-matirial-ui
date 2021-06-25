@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import {Grid, Button} from "@material-ui/core";
 import logo from '../../image/logo.png';
 import back from '../../image/back.png'
+import BackGround from '../../image/BackGround.png'
 import {Link} from "react-router-dom";
 
 function TabPanel(props) {
@@ -61,11 +62,16 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
     root: {
         // flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
+        backgroundImage: `url(${BackGround})`,
         '& .MuiInputBase-fullWidth': {
-            borderRadius: '30px',
+            borderRadius: '36px',
             borderColor: '#888888',
-            height: '37px',
+            height: '72px',
+            paddingLeft: '25px',
+            width: '400px',
+            fontFamily: 'Montserrat',
+            fontSize: '20px',
+            fontWeight: 'Regular',
         },
         '& .MuiFormControl-marginNormal': {
             marginTop: '10px',
@@ -75,11 +81,16 @@ const useStyles = makeStyles((theme) => ({
             paddingRight: '0',
         },
         '& .MuiButton-root': {
+            width: '400px',
+            fontFamily: 'Montserrat',
+            fontSize: '23px',
+            fontWeight: 'Regular',
+            height: '72px',
             marginTop: '15px',
             textTransform: 'unset',
             backgroundColor: '#072C50',
             color: '#fff',
-            borderRadius: '30px',
+            borderRadius: '36px',
             border: '1px solid #757575',
         },
         '& .Mui-selected': {
@@ -87,30 +98,45 @@ const useStyles = makeStyles((theme) => ({
         },
         '& .MuiTab-root': {
             textTransform: 'unset',
+        },
+        '& .MuiTab-wrapper': {
+            fontFamily: 'Lato',
+            fontSize: '29px',
+            fontWeight: 'bold',
+            color: '#072C50'
         }
     },
     links: {
+        fontFamily: 'Montserrat',
+        fontSize: '20px',
+        fontWeight: 'Regular',
         textAlign: 'center',
-        marginTop: '10px',
-        fontSize: '16px'
+        marginTop: '23px',
     },
     linkMargin: {
+        fontFamily: 'Montserrat',
+        fontSize: '20px',
+        fontWeight: 'Medium',
         textAlign: 'center',
-        marginTop: '20px',
-        fontSize: '16px'
+        marginTop: '37px',
     },
     linkSmall: {
+        fontFamily: 'Montserrat',
+        fontSize: '15px',
+        fontWeight: 'Medium',
         textAlign: 'center',
-        marginTop: '10px',
-        fontSize: '10px'
+        marginTop: '20px',
     },
     textField: {
-        width: '300px',
+        height: '72px',
+        width: '400px',
         fontSize: '14px'
     },
     backHome: {
+        fontFamily: 'Montserrat',
+        marginTop: '60px',
         paddingLeft: '50px',
-        fontSize: '16px',
+        fontSize: '18px',
         color: '#072C50'
     },
     pr5: {
@@ -125,6 +151,11 @@ const useStyles = makeStyles((theme) => ({
     },
     validation: {
         color: 'red',
+    },
+    alignContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     }
 }));
 
@@ -134,7 +165,7 @@ export default function NavTabs() {
     const [errors, setError] = useState({});
     const [loginDetails, setLoginDetails] = useState({
         firstName: "",
-        firstNameRegister:"",
+        firstNameRegister: "",
         lastName: "",
         password: "",
         emailConfirm: "",
@@ -190,33 +221,16 @@ export default function NavTabs() {
                     return null
                 }
             default:
-                return  null
+                return null
         }
     };
 
-    const handleLoginSubmit = () => {
+    const handleSubmit = () => {
         let allErrors = {};
         const userData = {
             firstName: loginDetails.firstName,
-            password: loginDetails.password,
-        }
-        Object.keys(userData).forEach(key => {
-            const error = validation(key, userData[key])
-            if (error && error.length) {
-                allErrors[key] = error;
-            }
-        })
-        if (Object.keys(allErrors).length) {
-            setError(allErrors)
-        } else {
-            setError({})
-        }
-    };
-
-    const handleRegisterSubmit = () => {
-        let allErrors = {};
-        const userData = {
             firstNameRegister: loginDetails.firstNameRegister,
+            password: loginDetails.password,
             lastName: loginDetails.lastName,
             email: loginDetails.email,
             emailConfirm: loginDetails.emailConfirm
@@ -230,15 +244,16 @@ export default function NavTabs() {
         if (Object.keys(allErrors).length) {
             setError(allErrors)
         } else {
+            console.log("register")
             setError({})
         }
-    };
+    }
 
     return (
         <div className={classes.root}>
             <div className={classes.backHome}>
-                <img src={back} alt='back' height='10' className={classes.pr5}/>
-                back to home
+                <img src={back} alt='back' height='13' className={classes.pr5}/>&nbsp;
+                Back To Home
             </div>
             <div className="form_container">
                 <img src={logo} alt="logo" width='250' className={classes.pd18}/>
@@ -255,117 +270,121 @@ export default function NavTabs() {
                 </Tabs>
             </div>
             <TabPanel value={value} index={0}>
-                <div className={classes.dFlex}>
-                    <TextField
-                        id="outlined-margin-normal"
-                        className={classes.textField}
-                        name="firstName"
-                        value={loginDetails.firstName}
-                        onChange={handleLoginChange}
-                        placeholder="Email *"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.firstName}</span>
+                <div className={classes.alignContent}>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            id="outlined-margin-normal"
+                            className={classes.textField}
+                            name="firstName"
+                            value={loginDetails.firstName}
+                            onChange={handleLoginChange}
+                            placeholder="Email *"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.firstName}</span>
+                    </div>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            id="outlined-margin-normal"
+                            className={classes.textField}
+                            name="password"
+                            type='password'
+                            value={loginDetails.password}
+                            onChange={handleLoginChange}
+                            placeholder="Password *"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.password}</span>
+                    </div>
+                    <div>
+                        <Button variant="contained" fullWidth onClick={handleSubmit}>LOGIN</Button>
+                    </div>
+                    <Grid item xs={12} className={classes.linkMargin}>
+                        <Link to="/login" className="font-color">forgot password?</Link>
+                    </Grid>
+                    <Grid item xs={12} className={classes.links}>
+                        <Link to="/login" className="font-color">Don't have an account?
+                            &nbsp;<b>Register</b>
+                        </Link>
+                    </Grid>
                 </div>
-                <div className={classes.dFlex}>
-                    <TextField
-                        id="outlined-margin-normal"
-                        className={classes.textField}
-                        name="password"
-                        type='password'
-                        value={loginDetails.password}
-                        onChange={handleLoginChange}
-                        placeholder="password *"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.password}</span>
-                </div>
-                <div>
-                    <Button variant="contained" fullWidth onClick={handleLoginSubmit}>login</Button>
-                </div>
-                <Grid item xs={12} className={classes.linkMargin}>
-                    <Link to="/login" className="font-color">forgot password?</Link>
-                </Grid>
-                <Grid item xs={12} className={classes.links}>
-                    <Link to="/login" className="font-color">Don't have an account?
-                        &nbsp;<b>Register</b>
-                    </Link>
-                </Grid>
-
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <div className={classes.dFlex}>
-                    <TextField
-                        id="outlined-margin-normal"
-                        name="firstNameRegister"
-                        value={loginDetails.firstNameRegister}
-                        onChange={handleLoginChange}
-                        className={classes.textField}
-                        placeholder="First name*"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.firstNameRegister}</span>
+                <div className={classes.alignContent}>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            id="outlined-margin-normal"
+                            name="firstNameRegister"
+                            value={loginDetails.firstNameRegister}
+                            onChange={handleLoginChange}
+                            className={classes.textField}
+                            placeholder="First name*"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.firstNameRegister}</span>
+                    </div>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            // label="Normal"
+                            id="outlined-margin-normal"
+                            name="lastName"
+                            value={loginDetails.lastName}
+                            onChange={handleLoginChange}
+                            className={classes.textField}
+                            placeholder="Last name*"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.lastName}</span>
+                    </div>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            // label="Normal"
+                            id="outlined-margin-normal"
+                            name="email"
+                            value={loginDetails.email}
+                            onChange={handleLoginChange}
+                            className={classes.textField}
+                            placeholder="Email*"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.email}</span>
+                    </div>
+                    <div className={classes.dFlex}>
+                        <TextField
+                            // label="Normal"
+                            id="outlined-margin-normal"
+                            // defaultValue="email *"
+                            className={classes.textField}
+                            placeholder="email confirmation*"
+                            margin="normal"
+                            variant="outlined"
+                            fullWidth
+                        />
+                        <span className={classes.validation}>{errors.emailConfirm}</span>
+                    </div>
+                    <div>
+                        <Button variant="contained" onClick={handleSubmit} fullWidth>REGISTER</Button>
+                    </div>
+                    <Grid item xs={12} className={classes.linkMargin}>
+                        <Link to="/login" className="font-color">Already have an account?&nbsp;<b>Login</b></Link>
+                    </Grid>
+                    <Grid item xs={12} className={classes.linkSmall}>
+                        <Link to="/login" className="font-color">By registering, you accept our Terms of Service and
+                            Privacy
+                            Policy.
+                        </Link>
+                    </Grid>
                 </div>
-                <div className={classes.dFlex}>
-                    <TextField
-                        // label="Normal"
-                        id="outlined-margin-normal"
-                        name="lastName"
-                        value={loginDetails.lastName}
-                        onChange={handleLoginChange}
-                        className={classes.textField}
-                        placeholder="Last name*"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.lastName}</span>
-                </div>
-                <div className={classes.dFlex}>
-                    <TextField
-                        // label="Normal"
-                        id="outlined-margin-normal"
-                        name="email"
-                        value={loginDetails.email}
-                        onChange={handleLoginChange}
-                        className={classes.textField}
-                        placeholder="Email*"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.email}</span>
-                </div>
-                <div className={classes.dFlex}>
-                    <TextField
-                        // label="Normal"
-                        id="outlined-margin-normal"
-                        // defaultValue="email *"
-                        className={classes.textField}
-                        placeholder="email confirmation*"
-                        margin="normal"
-                        variant="outlined"
-                        fullWidth
-                    />
-                    <span className={classes.validation}>{errors.emailConfirm}</span>
-                </div>
-                <div>
-                    <Button variant="contained" onClick={handleRegisterSubmit} fullWidth>Register</Button>
-                </div>
-                <Grid item xs={12} className={classes.linkMargin}>
-                    <Link to="/login" className="font-color">Already have an account?&nbsp;<b>Login</b></Link>
-                </Grid>
-                <Grid item xs={12} className={classes.linkSmall}>
-                    <Link to="/login" className="font-color">By registering, you accept our Terms of Service and Privacy
-                        Policy.
-                    </Link>
-                </Grid>
             </TabPanel>
         </div>
     );

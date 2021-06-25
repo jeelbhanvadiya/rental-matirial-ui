@@ -3,24 +3,33 @@
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 
   .heading {
+    font-family: Montserrat;
+    font-weight: bolder;
     font-size: 40px;
     color: #072C50;
   }
 
   .inputFields {
     opacity: 0.5019607843137255;
-    padding: 20px 10px
+    padding: 40px 10px
   }
 
   .listing {
+    padding-left: 15px;
+    font-family: Montserrat;
+    font-weight: 'SemiBold';
+    font-size: 20px;
     color:#072C50;
     margin-top: 25px;
     height: 20px;
     opacity: 1;
-    font-weight: 600;
     fill: #072C50;
-    font-size: 20px;
     text-align: left;
+  }
+  .MuiFormControlLabel-label{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #072C50;
   }
 
   .text-field {
@@ -42,8 +51,10 @@
 
   .button-small {
     background-color: white;
-    font-size: 15px;
-    height: 30px;
+    font-size: 20px;
+    font-family: Montserrat;
+    height: 45px;
+    width: 150px;
     margin-top: 10px;
     text-transform: unset;
     border: 1px solid #757575;
@@ -52,14 +63,16 @@
   }
 
   .button-big {
-    font-size: 18px;
-    height: 50px;
+    font-size: 20px;
+    font-family: Montserrat;
+    height: 72px;
+    font-weight: lighter !important;
     margin-top: 10px;
     text-transform: unset;
-    color: #072C50;
+    color: #8395A7;
     background-color: #FFFFFF;
-    border: 1px solid #757575;
-    border-radius: 15px;
+    border: 1px dashed #707070;
+    border-radius: 27px;
     box-shadow: unset;
   }
 }
@@ -82,10 +95,13 @@
 .MuiDropzoneArea-text {
   margin-top: 10px !important;
 }
+.MuiInput-underline:before{
+  border-bottom: 1px solid #707070 !important;
+}
 
 textarea {
   resize: none;
-  border-radius: 15px;
+  border-radius: 27px;
 }
 
 @media screen and (max-width: 720px) {

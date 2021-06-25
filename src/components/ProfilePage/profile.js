@@ -24,7 +24,7 @@ const ProfilePage = () => {
                 <Grid item xs={12} md={1}/>
                 <Grid item xs={12} md={6} className="padding10">
                     <div className="personalInfo">
-                        <h1 className="heading">Personal information</h1>
+                        <div className="heading">Personal information</div>
                         <Grid container>
                             <Grid item xs={12} md={6}>
                                 <div className="inputFields">

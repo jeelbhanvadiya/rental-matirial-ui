@@ -281,8 +281,8 @@ const CreateForm = () => {
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <RadioGroup className="radio-input" row >
-                                    <FormControlLabel name="status" value="Active" onChange={handleCreateChange} control={<Radio/>} label="Active"/>
-                                    <FormControlLabel name="status" value="InActive" onChange={handleCreateChange} control={<Radio/>} label="InActive"/>
+                                    <FormControlLabel className="radioInput" name="status" value="Active" onChange={handleCreateChange} control={<Radio/>} label="Active"/>
+                                    <FormControlLabel className="radioInput" name="status" value="InActive" onChange={handleCreateChange} control={<Radio/>} label="InActive"/>
                                 </RadioGroup>
                                 <span className={classes.validation}>{errors.status}</span>
                             </Grid>
